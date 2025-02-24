@@ -5,6 +5,7 @@ import HelloWorld from './components/HelloWorld.vue'
 onMounted(async () => {
   const username = await globalThis.electronAPI.send('getUsernameById', 1)
   console.log('getUsernameById', username)
+  console.log('test')
 
   window.electronAPI.on('newUserJoin', (userID) => {
     console.log('userID', userID)
